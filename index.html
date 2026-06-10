@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Family Lineage</title>
+<title>თავხელიძეების გენეალოგია</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
 :root{--blue:#3a6b9e;--blue-dark:#2a5070;--bg:#f4f0e8;--panel:#ede8dc;--text:#2a2a2a;--border:rgba(58,107,158,0.18);}
@@ -107,8 +107,8 @@ canvas:active{cursor:grabbing;}
   <div class="auth-box">
     <div class="auth-logo">
       <div class="auth-ornament">✦ ✦ ✦</div>
-      <h1>FAMILY LINEAGE</h1>
-      <p>Patrilineal Tree · Est. XV Century</p>
+      <h1>თავხელიძეების გენეალოგია</h1>
+      <p>XVII საუკუნიდან დღემდე</p>
       <div class="auth-ornament" style="font-size:0.65rem">— ✦ —</div>
       <button onclick="showScreen('screen-app')" style="background:none;border:none;color:rgba(42,80,112,0.5);font-size:0.78rem;cursor:pointer;font-style:italic;margin-top:0.3rem">← უკან რუქაზე</button>
     </div>
@@ -124,10 +124,10 @@ canvas:active{cursor:grabbing;}
     </div>
     <div class="auth-form" id="atab-request">
       <p style="font-style:italic;font-size:0.82rem;color:rgba(42,80,112,0.6);margin-bottom:0.9rem;line-height:1.5">შეიყვანეთ მონაცემები. ადმინისტრატორი განიხილავს თქვენს მოთხოვნას.</p>
-      <div class="form-group"><label>სრული სახელი</label><input type="text" id="req-name"></div>
+      <div class="form-group"><label>სახელი</label><input type="text" id="req-name"></div>
       <div class="form-group"><label>ელ-ფოსტის მისამართი</label><input type="email" id="req-email"></div>
       <div class="form-group"><label>როგორ ხართ დაკავშირებული? <span style="opacity:0.5">(არასავალდებულო)</span></label><textarea id="req-msg" rows="2"></textarea></div>
-      <button class="btn" id="btn-request">მოთხოვნის გაგზავნა</button>
+      <button class="btn" id="btn-request">გაგზავნა</button>
       <div id="request-msg"></div>
     </div>
   </div>
@@ -206,14 +206,14 @@ canvas:active{cursor:grabbing;}
       <div class="panel-body">
         <div class="tab-content active" id="tab-add">
           <div id="person-detail-panel"></div>
-          <div class="section-title">პირის დამატება</div>
-          <div class="form-group"><label>სრული სახელი</label><input type="text" id="f-name" placeholder="სახელი გვარი"></div>
+          <div class="section-title">წევრის დამატება</div>
+          <div class="form-group"><label>სახელი</label><input type="text" id="f-name" placeholder="სახელი"></div>
           
-          <div class="form-group"><label>დაბადების წელი <span style="opacity:0.5">(არასავალდებულო)</span></label><input type="number" id="f-birth" placeholder="მაგ. 1890"></div>
-          <div class="form-group"><label>გარდაცვალების წელი <span style="opacity:0.5">(არასავალდებულო)</span></label><input type="number" id="f-death"></div>
-          <div class="form-group"><label>მშობელი</label><select id="f-parent"><option value="">— აირჩიეთ მშობელი —</option></select></div>
-          <div class="form-group"><label>შენიშვნა <span style="opacity:0.5">(არასავალდებულო)</span></label><textarea id="f-notes" rows="2"></textarea></div>
-          <button class="btn" id="btn-add">გვარეულობაში დამატება</button>
+          <div class="form-group"><label>დაბადების წელი <span style="opacity:0.5">(სურვილისამებრ)</span></label><input type="number" id="f-birth" placeholder="მაგ. 1890"></div>
+          <div class="form-group"><label>გარდაცვალების წელი <span style="opacity:0.5">(სურვილისამებრ)</span></label><input type="number" id="f-death"></div>
+          <div class="form-group"><label>მამა</label><select id="f-parent"><option value="">— აირჩიეთ მამა —</option></select></div>
+          <div class="form-group"><label>შენიშვნა <span style="opacity:0.5">(სურვილისამებრ)</span></label><textarea id="f-notes" rows="2"></textarea></div>
+          <button class="btn" id="btn-add">დამატება</button>
           <div id="add-msg"></div>
         </div>
         <div class="tab-content" id="tab-browse">
@@ -221,13 +221,13 @@ canvas:active{cursor:grabbing;}
           <div id="person-list"></div>
         </div>
         <div class="tab-content" id="tab-stats">
-          <div class="section-title">გვარეულობის მიმოხილვა</div>
+          <div class="section-title">სტატისტიკა</div>
           <div class="stat-row"><span class="stat-label">სულ წევრები</span><span class="stat-val" id="s-total">—</span></div>
           
           
           <div class="stat-row"><span class="stat-label">თაობები</span><span class="stat-val" id="s-gens">—</span></div>
           <div class="stat-row"><span class="stat-label">ცოცხლები</span><span class="stat-val" id="s-living">—</span></div>
-          <div class="stat-row"><span class="stat-label">უდიდესი თაობა</span><span class="stat-val" id="s-largest">—</span></div>
+          <div class="stat-row"><span class="stat-label">ყველაზე დიდი თაობა</span><span class="stat-val" id="s-largest">—</span></div>
         </div>
       </div>
     </div>
@@ -377,7 +377,7 @@ function getRadius(gen){
   const boxGap = gen===3 ? 55 : gen===4 ? 55 : gen===5 ? 120 : gen===6 ? 75 : BOX_GAP;
   const neededR=(count*(BOX_W+boxGap))/(ARC_SPAN*avgStretch);
   const prevR=gen===1?40:getRadius(gen-1);
-  const gaps={1:50, 2:110, 3:110, 4:110, 5:110, 6:35};
+  const gaps={1:50, 2:110, 3:110, 4:110, 5:110, 6:35, 7:100};
   const gap=gaps[gen]||70;
   return Math.max(neededR, prevR+gap);
 }
@@ -439,7 +439,7 @@ function buildLayout(){
         const siblings=ids.filter(sid=>byId[sid].parent_id===p.parent_id);
         const sibIndex=siblings.indexOf(id);
         const sibCount=siblings.length;
-        const spread=0.3;
+        const spread=0.02;
         byId[id]._angle=parent
           ? parent._angle + (sibIndex-(sibCount-1)/2)*spread/Math.max(sibCount-1,1)
           : (2*Math.PI*ids.indexOf(id))/total;
@@ -789,7 +789,7 @@ document.querySelectorAll('.tab').forEach(btn=>{btn.addEventListener('click',()=
 // ── ADD PERSON ────────────────────────────────────────────────────────────────
 function populateParentDropdown(){
   const sel=document.getElementById('f-parent'),cur=sel.value;
-  sel.innerHTML='<option value="">— აირჩიეთ მშობელი —</option>';
+  sel.innerHTML='<option value="">— აირჩიეთ მამა —</option>';
   allPeople.filter(p=>p.gender==='m').sort((a,b)=>a.generation-b.generation).forEach(p=>{
     const o=document.createElement('option');o.value=p.id;
     o.textContent=`${p.full_name}${p.birth_year?' (b.'+p.birth_year+')':''} — Gen ${p.generation}`;
@@ -928,23 +928,23 @@ function showPersonDetail(p){
   const years=[p.birth_year?`b. ${p.birth_year}`:'',p.death_year?`d. ${p.death_year}`:''].filter(Boolean).join(' · ');
   const detail=document.getElementById('person-detail-panel');
   const editForm=isAdmin?`
-    <hr class="divider"><div class="section-title">რედაქტირება</div>
-    <div class="form-group"><label>სრული სახელი</label><input type="text" id="edit-name" value="${p.full_name}"></div>
+    <hr class="divider"><div class="section-title">შესწორება</div>
+    <div class="form-group"><label>სახელი</label><input type="text" id="edit-name" value="${p.full_name}"></div>
     
     <div class="form-group"><label>დაბადების წელი</label><input type="number" id="edit-birth" value="${p.birth_year||''}"></div>
     <div class="form-group"><label>გარდაცვალების წელი</label><input type="number" id="edit-death" value="${p.death_year||''}"></div>
     <div class="form-group"><label>Notes</label><textarea id="edit-notes" rows="2">${p.notes||''}</textarea></div>
-    <button class="btn" id="btn-save-edit" style="margin-bottom:0.4rem">ცვლილებების შენახვა</button>
-    <button class="btn danger" id="btn-delete-person">პირის წაშლა</button>
+    <button class="btn" id="btn-save-edit" style="margin-bottom:0.4rem">შენახვა</button>
+    <button class="btn danger" id="btn-delete-person">წაშლა</button>
     <div id="edit-msg"></div>`:'';
   const suggestForm=(!isAdmin&&currentUser)?`
-    <hr class="divider"><div class="section-title">კორექციის შეთავაზება</div>
-    <p style="font-size:0.78rem;font-style:italic;color:rgba(42,80,112,0.55);margin-bottom:0.6rem;line-height:1.4">ადმინისტრატორი განიხილავს სანამ ხეზე გამოჩნდება.</p>
+    <hr class="divider"><div class="section-title">შენიშვნის გაგზავნა</div>
+    <p style="font-size:0.78rem;font-style:italic;color:rgba(42,80,112,0.55);margin-bottom:0.6rem;line-height:1.4">თქვენი შენიშვნა ადმინისტრატორს გადაეგზავნება განხილვისთვის.</p>
     <div class="form-group"><label>შესწორებული სახელი</label><input type="text" id="sug-name" value="${p.full_name}"></div>
     <div class="form-group"><label>დაბადების წელი</label><input type="number" id="sug-birth" value="${p.birth_year||''}"></div>
     <div class="form-group"><label>გარდაცვალების წელი</label><input type="number" id="sug-death" value="${p.death_year||''}"></div>
     <div class="form-group"><label>მიზეზი</label><textarea id="sug-note" rows="2" placeholder="ახსენით რა საჭიროებს კორექციას..."></textarea></div>
-    <button class="btn" id="btn-suggest-edit">შეთავაზების გაგზავნა</button>
+    <button class="btn" id="btn-suggest-edit">გაგზავნა</button>
     <div id="sug-msg"></div>`:'';
   const viewerPrompt=(!isAdmin&&!currentUser)?`<hr class="divider"><p style="font-size:0.8rem;font-style:italic;color:rgba(42,80,112,0.5);line-height:1.5"><a href="#" onclick="showScreen('screen-auth');return false;" style="color:var(--blue)">შესვლა</a> კორექციების შეთავაზებისთვის.</p>`:'';
   detail.innerHTML=`
